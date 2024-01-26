@@ -1,0 +1,17 @@
+@use "../base/variable" as v;
+
+.headerTitle {
+    color: v.$rosa_claro;
+}
+
+nav {
+    background-color: v.$rosa_pastel;
+    padding : 5px;
+    a{
+        transition: 1s;
+        &:hover {
+            background-color: white;
+            font-weight: bold;
+        }
+    }
+}

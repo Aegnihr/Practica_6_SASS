@@ -1,0 +1,91 @@
+@use "../base/colours" as a;
+@use "../base/variable" as v;
+
+@mixin redesColours {
+    @for $i from 1 through 6 {
+        .red#{$i} {
+            background-color: map-get(a.$colores , color#{$i});
+            padding: 15px;
+        }
+    }
+}
+
+@mixin Logos {
+    #logo_redes {
+        width: 100px;
+    }
+
+    #logo_SASS {
+        width: 100px;
+    }
+}
+
+@mixin PaletaPrincipal {
+    @for $i from 1 through 4 {
+        .paleta#{$i} {
+            background-color: map-get(a.$colores , color#{$i});
+            height: 80px;
+        }
+    }
+}
+
+@mixin RedTonality {
+    $baseColor : map-get(a.$colores, "color4");
+
+    @for $i from 1 through 3 {
+        .RED {
+            .tonalidad#{$i} {
+                background-color: darken($baseColor, 10% * $i);
+                height: 80px;
+            }
+
+        }
+    }
+}
+@mixin GreenTonality {
+    $baseColor : map-get(a.$colores, "color1");
+
+    @for $i from 1 through 3 {
+        .GREEN {
+            .tonalidad#{$i} {
+                background-color: darken($baseColor, 10% * $i);
+                height: 80px;
+            }
+
+        }
+    }
+}
+@mixin BlueTonality {
+    $baseColor : map-get(a.$colores, "color2");
+
+    @for $i from 1 through 3 {
+        .BLUE {
+            .tonalidad#{$i} {
+                background-color: darken($baseColor, 10% * $i);
+                height: 80px;
+            }
+
+        }
+    }
+}
+@mixin SkyBlueTonality {
+    $baseColor : map-get(a.$colores, "color3");
+
+    @for $i from 1 through 3 {
+        .SKYBLUE {
+            .tonalidad#{$i} {
+                background-color: darken($baseColor, 10% * $i);
+                height: 80px;
+            }
+
+        }
+    }
+}
+
+@mixin Footer {
+    footer{
+        background-color: v.$rosa_pastel;
+        margin-top: 15px;
+        padding: 10px;
+    }
+}

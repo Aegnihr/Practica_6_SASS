@@ -1,0 +1,12 @@
+@use "../base/mixins" as m;
+
+//COLORES PRINCIPALES
+@include m.PaletaPrincipal;
+
+
+//TONALIDADES
+@include m.RedTonality;
+@include m.GreenTonality;
+@include m.BlueTonality;
+@include m.SkyBlueTonality;
+
